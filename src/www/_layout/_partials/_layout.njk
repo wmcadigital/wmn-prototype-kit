@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" class="wmnds-html">
+  <!-- Head -->
+  {% include "_layout/_partials/_head.njk" %}
+
+  <body class="wmnds-body">
+    {# Header #}
+
+    <main class="wmnds-container wmnds-container--main">
+      {% block body %} {% endblock body %}
+    </main>
+    
+    {# Footer #}
+
+    <!-- Scripts -->
+    {% include "_layout/_partials/_scripts.njk" %}
+  </body>
+</html>
