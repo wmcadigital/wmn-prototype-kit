@@ -1,9 +1,12 @@
 {% extends "_layout/_sidebar-left.njk" %}
+{# Imports #}
+{% from "components/accordion/_accordion.njk" import wmndsAccordion %}
 
 {% block sidebar %}
     This is the sidebar
 {% endblock sidebar %}
 
 {% block content %}
-    Hello
+    Hello world
+    {{ wmndsAccordion() }}
 {% endblock content %}
