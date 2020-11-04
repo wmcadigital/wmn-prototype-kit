@@ -1,4 +1,5 @@
 const browserSync = require("browser-sync").create();
+
 const paths = require("./paths.js");
 
 const sync = () => {

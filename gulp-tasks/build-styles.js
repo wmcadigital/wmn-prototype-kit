@@ -1,8 +1,9 @@
 const { src, dest } = require("gulp");
 const plugins = require("gulp-load-plugins")();
+
 const paths = require("./paths");
 
-module.exports.buildScss = () => {
+const buildScss = () => {
   return src(paths.sass.src)
     .pipe(plugins.sass().on("error", plugins.sass.logError))
     .pipe(plugins.autoprefixer()) // Prefix css with older browser support
@@ -14,3 +15,7 @@ module.exports.buildScss = () => {
     )
     .pipe(dest(paths.output.css));
 };
+
+module.exports = {
+  buildScss
+}

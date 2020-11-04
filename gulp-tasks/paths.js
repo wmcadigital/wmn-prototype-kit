@@ -1,3 +1,7 @@
+// Variables
+const wmndsBase = "node_modules/wmn-design-system/build"
+const outputBase = "build"
+
 module.exports = {
   njk: {
     pageSrc: "src/www/pages/*.njk",
@@ -8,12 +12,28 @@ module.exports = {
     src: "./src/assets/scss/*.scss",
   },
   wmnds: {
-    srcDir: "node_modules/wmn-design-system/",
-    cssSrc: "node_modules/wmn-design-system/*.min.css"
+    njk: { 
+      srcDir: `${wmndsBase}/njk`
+    },
+    css: { 
+      src: `${wmndsBase}/**/*.min.css`
+    },
+    js: { 
+      src: `${wmndsBase}/js/*.min.js`
+    },
+    img: { 
+      src: `${wmndsBase}/img/*.svg`
+    },
+    fonts: { 
+      src: `${wmndsBase}/fonts/*`
+    }
   },
   output: {
-    dir: "build/",
-    html: "build/",
-    css: "build/css/"
+    dir: `${outputBase}/`,
+    html: `${outputBase}/`,
+    css: `${outputBase}/css/`,
+    img: `${outputBase}/img/`,
+    js: `${outputBase}/js`,
+    fonts: `${outputBase}/fonts/`,
   }
 };
