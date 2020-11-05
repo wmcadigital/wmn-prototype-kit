@@ -16,7 +16,7 @@ module.exports = {
       srcDir: `${wmndsBase}/njk`
     },
     css: { 
-      src: `${wmndsBase}/**/*.min.css`
+      src: `${wmndsBase}/css/*.min.css`
     },
     js: { 
       src: `${wmndsBase}/js/*.min.js`
