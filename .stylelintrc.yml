@@ -1,0 +1,346 @@
+# STYLELINT CONFIGURATION
+# Uses defaults from stylelint-config-sass-guidelines which also bundles the following plugins:
+# - stylelint-order (lints prefixed with order/*)
+# - stylelint-scss (lints prefixed with scss/*)
+
+extends:
+  # https://github.com/bjankord/stylelint-config-sass-guidelines#configured-lints
+  - stylelint-config-sass-guidelines
+  # https://github.com/prettier/stylelint-prettier
+  - stylelint-prettier/recommended
+plugins:
+rules:
+  # at-rule-disallowed-list - specify a list of disallowed at-rules.
+  # https://stylelint.io/user-guide/rules/at-rule-disallowed-list
+  # Default in stylelint-config-sass-guidelines
+
+  # block-closing-brace-newline-before - require a newline or disallow whitespace before the closing brace of blocks.
+  # https://stylelint.io/user-guide/rules/block-closing-brace-newline-before
+  block-closing-brace-newline-before: always
+
+  # block-no-empty - disallow empty blocks.
+  # http://stylelint.io/user-guide/rules/block-no-empty
+  # Default in stylelint-config-sass-guidelines
+
+  # block-opening-brace-newline-after - Require a newline or disallow whitespace before the closing brace of blocks.
+  # https://stylelint.io/user-guide/rules/block-closing-brace-newline-after
+  block-opening-brace-newline-after: always
+
+  # block-opening-brace-space-before - require a single space or disallow whitespace before the opening brace of blocks.
+  # http://stylelint.io/user-guide/rules/block-opening-brace-space-before/
+  # Default in stylelint-config-sass-guidelines
+
+  # color-hex-case - specify lowercase or uppercase for hex colors.
+  # https://stylelint.io/user-guide/rules/color-hex-case
+  # Default in stylelint-config-sass-guidelines
+
+  # color-hex-length - specify short or long notation for hex colors.
+  # https://stylelint.io/user-guide/rules/color-hex-length
+  color-hex-length: long
+
+  # color-named - require (where possible) or disallow named colors.
+  # https://stylelint.io/user-guide/rules/color-named
+  # Default in stylelint-config-sass-guidelines
+
+  # color-no-invalid-hex - require valid hex color values.
+  # http://stylelint.io/user-guide/rules/color-no-invalid-hex
+  # Default in stylelint-config-sass-guidelines
+
+  # declaration-bang-space-after - Require a single space or disallow whitespace after the bang of declarations.
+  # https://stylelint.io/user-guide/rules/declaration-bang-space-after
+  # Default in stylelint-config-sass-guidelines
+
+  # declaration-bang-space-before
+  # https://stylelint.io/user-guide/rules/declaration-bang-space-before
+  # Default in stylelint-config-sass-guidelines
+
+  # declaration-block-no-duplicate-properties - disallow duplicate properties within declaration blocks
+  # https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties
+  declaration-block-no-duplicate-properties: true
+
+  # declaration-block-trailing-semicolon - require or disallow a trailing semicolon within declaration blocks.
+  # https://stylelint.io/user-guide/rules/declaration-block-trailing-semicolon
+  # Default in stylelint-config-sass-guidelines
+
+  # declaration-colon-space-after - require a single space or disallow whitespace after the colon of declarations.
+  # https://stylelint.io/user-guide/rules/declaration-colon-space-after
+  # Default in stylelint-config-sass-guidelines
+
+  # declaration-colon-space-before - require a single space or disallow whitespace before the colon of declarations.
+  # https://stylelint.io/user-guide/rules/declaration-colon-space-before
+  # Default in stylelint-config-sass-guidelines
+
+  # declaration-property-value-disallowed-list - specify a list of disallowed property and value pairs within declarations.
+  # https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list
+  # e.g. "unprefixed-property-name": ["array", "of", "values", "or", "/regex/"],
+  declaration-property-value-disallowed-list:
+    '/^transition/': ['/all/']
+
+  # function-comma-space-after - there must always be a single space after the commas in single-line functions.
+  # http://stylelint.io/user-guide/rules/function-comma-space-after/
+  # Default in stylelint-config-sass-guidelines
+
+  # function-parentheses-space-inside - there must never be whitespace on the inside of the parentheses of functions.
+  # http://stylelint.io/user-guide/rules/function-parentheses-space-inside/
+  # Default in stylelint-config-sass-guidelines
+
+  # function-url-quotes - require or disallow quotes for urls.
+  # https://stylelint.io/user-guide/rules/function-url-quotes
+  # Default in stylelint-config-sass-guidelines
+
+  # function-name-case - specify lowercase or uppercase for function names.
+  # https://stylelint.io/user-guide/rules/function-name-case
+  function-name-case: lower
+
+  # indentation - specify indentation.
+  # https://stylelint.io/user-guide/rules/indentation
+  indentation: 2
+
+  # length-zero-no-unit - disallow units for zero lengths
+  # https://stylelint.io/user-guide/rules/length-zero-no-unit
+  # Default in stylelint-config-sass-guidelines
+
+  # max-nesting-depth - limit the depth of nesting.
+  # https://stylelint.io/user-guide/rules/max-nesting-depth
+  max-nesting-depth:
+    - 2
+    - ignore:
+        - pseudo-classes
+        - blockless-at-rules
+
+  # number-leading-zero - require or disallow a leading zero for fractional numbers less than 1.
+  # https://stylelint.io/user-guide/rules/number-leading-zero
+  # Default in stylelint-config-sass-guidelines
+
+  # no-trailing-zero - disallow trailing zeros in numbers.
+  # https://stylelint.io/user-guide/rules/number-no-trailing-zeros
+  # Default in stylelint-config-sass-guidelines
+
+  # no-missing-end-of-source-newline - disallow missing end-of-source newlines.
+  # https://stylelint.io/user-guide/rules/no-missing-end-of-source-newline
+  no-missing-end-of-source-newline: true
+
+  # order/properties-alphabetical-order - specify the order of properties within declaration blocks.
+  # https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md
+  order/properties-alphabetical-order: null
+
+  # order/properties-order - specify the alphabetical order of properties within declaration blocks.
+  # https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md
+  order/properties-order:
+    - 'content'
+    - 'quotes'
+    #
+    - 'box-sizing'
+    #
+    - 'display'
+    - 'visibility'
+    #
+    - 'position'
+    - 'z-index'
+    - 'top'
+    - 'right'
+    - 'bottom'
+    - 'left'
+    #
+    - 'width'
+    - 'min-width'
+    - 'max-width'
+    - 'height'
+    - 'min-height'
+    - 'max-height'
+    #
+    - 'margin'
+    - 'margin-top'
+    - 'margin-right'
+    - 'margin-bottom'
+    - 'margin-left'
+    #
+    - 'padding'
+    - 'padding-top'
+    - 'padding-right'
+    - 'padding-bottom'
+    - 'padding-left'
+    #
+    - 'float'
+    - 'clear'
+    #
+    - 'overflow'
+    - 'overflow-x'
+    - 'overflow-y'
+    #
+    - 'clip'
+    - 'clip-path'
+    - 'zoom'
+    - 'resize'
+    #
+    - 'columns'
+    #
+    - 'table-layout'
+    - 'empty-cells'
+    - 'caption-side'
+    - 'border-spacing'
+    - 'border-collapse'
+    #
+    - 'list-style'
+    - 'list-style-position'
+    - 'list-style-type'
+    - 'list-style-image'
+    #
+    - 'transform'
+    - 'transition'
+    - 'animation'
+    #
+    - 'border'
+    - 'border-top'
+    - 'border-right'
+    - 'border-bottom'
+    - 'border-left'
+    #
+    - 'border-width'
+    - 'border-top-width'
+    - 'border-right-width'
+    - 'border-bottom-width'
+    - 'border-left-width'
+    #
+    - 'border-style'
+    - 'border-top-style'
+    - 'border-right-style'
+    - 'border-bottom-style'
+    - 'border-left-style'
+    #
+    - 'border-radius'
+    - 'border-top-left-radius'
+    - 'border-top-right-radius'
+    - 'border-bottom-left-radius'
+    - 'border-bottom-right-radius'
+    #
+    - 'border-color'
+    - 'border-top-color'
+    - 'border-right-color'
+    - 'border-bottom-color'
+    - 'border-left-color'
+    #
+    - 'outline'
+    - 'outline-color'
+    - 'outline-offset'
+    - 'outline-style'
+    - 'outline-width'
+    #
+    - 'opacity'
+    # Color has been moved to ensure it appears before background
+    - 'color'
+    - 'background'
+    - 'background-color'
+    - 'background-image'
+    - 'background-repeat'
+    - 'background-position'
+    - 'background-size'
+    - 'box-shadow'
+    - 'fill'
+    #
+    - 'font'
+    - 'font-family'
+    - 'font-size'
+    - 'font-style'
+    - 'font-variant'
+    - 'font-weight'
+    #
+    - 'font-emphasize'
+    #
+    - 'letter-spacing'
+    - 'line-height'
+    - 'list-style'
+    - 'word-spacing'
+    #
+    - 'text-align'
+    - 'text-align-last'
+    - 'text-decoration'
+    - 'text-indent'
+    - 'text-justify'
+    - 'text-overflow'
+    - 'text-overflow-ellipsis'
+    - 'text-overflow-mode'
+    - 'text-rendering'
+    - 'text-outline'
+    - 'text-shadow'
+    - 'text-transform'
+    - 'text-wrap'
+    - 'word-wrap'
+    - 'word-break'
+    #
+    - 'text-emphasis'
+    #
+    - 'vertical-align'
+    - 'white-space'
+    - 'word-spacing'
+    - 'hyphens'
+    #
+    - 'src'
+    - 'cursor'
+    - '-webkit-appearance'
+
+  # property-no-unknown - disallow unknown properties.
+  # https://stylelint.io/user-guide/rules/property-no-unknown
+  property-no-unknown: true
+
+  # scss/at-import-no-partial-leading-underscore - disallow leading underscore in partial names in @import.
+  # https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-no-partial-leading-underscore/README.md
+  scss/at-import-no-partial-leading-underscore: true
+
+  # scss/at-import-partial-extension - require or disallow extension in @import commands.
+  # https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension/README.md
+  scss/at-import-partial-extension: never
+
+  # scss/at-mixin-pattern - SCSS mixins must be written in lowercase and match the regex ^[a-z]+([a-z0-9-]+[a-z0-9]+)?$
+  # https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-mixin-pattern/README.md
+  # Default in stylelint-config-sass-guidelines/scss
+
+  # scss/dollar-variable-pattern - SCSS variables must be written in lowercase and match the regex ^[a-z]+([a-z0-9-]+[a-z0-9]+)?$
+  # https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-pattern/README.md
+  scss/dollar-variable-pattern:
+    - '^_*[a-z]+([a-z0-9-]+[a-z0-9]+)?$'
+
+  # scss/percent-placeholder-pattern - SCSS %-placeholders must be written in lowercase and match the regex ^[a-z]+([a-z0-9-]+[a-z0-9]+)?$.
+  # https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/percent-placeholder-pattern/README.md
+  # Default in stylelint-config-sass-guidelines/scss
+
+  # selector-class-pattern - specify a pattern for class selectors.
+  # https://stylelint.io/user-guide/rules/selector-class-pattern
+  selector-class-pattern:
+    - '^wmnds(-[a-z0-9]+)*((__|--)[a-z0-9]+(-[a-z0-9]+)*){0,2}$'
+    - resolveNestedSelectors: true
+
+  # selector-list-comma-newline-after - require a newline or disallow whitespace after the commas of selector lists.
+  # https://stylelint.io/user-guide/rules/selector-list-comma-newline-after
+  selector-list-comma-newline-after: always
+
+  # selector-list-comma-space-after - require a single space or disallow whitespace after the commas of selector lists.
+  # https://stylelint.io/user-guide/rules/selector-list-comma-space-after
+  selector-list-comma-space-after: always
+
+  # selector-no-id - disallow id selectors.
+  # http://stylelint.io/user-guide/rules/selector-no-id/
+  # Default in stylelint-config-sass-guidelines
+
+  # selector-no-qualifying-type - disallow qualifying a selector by type.
+  # https://stylelint.io/user-guide/rules/selector-no-qualifying-type
+  selector-no-qualifying-type:
+    - true
+    - ignore:
+        - attribute
+
+  # selector-pseudo-element-colon-notation - specify single or double colon notation for applicable pseudo-elements.
+  # https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation
+  selector-pseudo-element-colon-notation: null
+
+  # string-quotes - specify single or double quotes around strings.
+  # https://stylelint.io/user-guide/rules/string-quotes
+  string-quotes: double
+
+  # unit-allowed-list - specify a list of allowed units.
+  # https://stylelint.io/user-guide/rules/unit-allowed-list
+  unit-allowed-list: [cm, em, pt, px, rem, vh, ex, '%', s]
+
+  # value-list-comma-space-after - require a single space or disallow whitespace after the commas of value lists.
+  # https://stylelint.io/user-guide/rules/value-list-comma-space-after
+  value-list-comma-space-after: always
