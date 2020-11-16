@@ -1,39 +1,44 @@
 // Variables
-const wmndsBase = "node_modules/wmn-design-system/build"
-const outputBase = "build"
+const dirBase = {
+  www: "src/www",
+  assets: "src/assets",
+  output: "build",
+  wmnds: "node_modules/wmn-design-system/build"
+}
 
 module.exports = {
   njk: {
-    pageSrc: "src/www/pages/*.njk",
-    src: "src/www/**/*.njk",
-    srcDir: "src/www/"
+    pageSrc: [`${dirBase.www}/pages/**/*.njk`, `${dirBase.www}/pages/**/*.html`],
+    src: [`${dirBase.www}/**/*.njk`, `${dirBase.www}/**/*.html`],
+    srcDir: `${dirBase.www}/`
   },
   sass: {
-    src: "./src/assets/scss/*.scss",
+    src: `${dirBase.assets}/scss/*.scss`,
+    mainSrc: `${dirBase.assets}/scss/wmn-user-testing.scss`
   },
   wmnds: {
     njk: { 
-      srcDir: `${wmndsBase}/njk`
+      srcDir: `${dirBase.wmnds}/njk`
     },
     css: { 
-      src: `${wmndsBase}/css/*.min.css`
+      src: `${dirBase.wmnds}/css/wmnds-components.min.css`
     },
     js: { 
-      src: `${wmndsBase}/js/*.min.js`
+      src: `${dirBase.wmnds}/js/*.min.js`
     },
     img: { 
-      src: `${wmndsBase}/img/*.svg`
+      src: `${dirBase.wmnds}/img/*.svg`
     },
     fonts: { 
-      src: `${wmndsBase}/fonts/*`
+      src: `${dirBase.wmnds}/fonts/*`
     }
   },
   output: {
-    dir: `${outputBase}/`,
-    html: `${outputBase}/`,
-    css: `${outputBase}/css/`,
-    img: `${outputBase}/img/`,
-    js: `${outputBase}/js`,
-    fonts: `${outputBase}/fonts/`,
+    dir: `${dirBase.output}/`,
+    html: `${dirBase.output}/`,
+    css: `${dirBase.output}/css/`,
+    img: `${dirBase.output}/img/`,
+    js: `${dirBase.output}/js`,
+    fonts: `${dirBase.output}/fonts/`,
   }
 };

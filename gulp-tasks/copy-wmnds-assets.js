@@ -26,4 +26,6 @@ const copyWmndsFonts = () => {
 
 const copyWmndsAssets = series(copyWmndsCss, copyWmndsImg, copyWmndsJs, copyWmndsFonts)
 
-module.exports.copyWmndsAssets = copyWmndsAssets
+module.exports = {
+    copyWmndsAssets
+}

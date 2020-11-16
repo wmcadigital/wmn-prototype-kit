@@ -3,8 +3,8 @@ const plugins = require("gulp-load-plugins")();
 
 const paths = require("./paths");
 
-const buildScss = () => {
-  return src(paths.sass.src)
+const buildStyles = () => {
+  return src(paths.sass.mainSrc)
     .pipe(plugins.sass().on("error", plugins.sass.logError))
     .pipe(plugins.autoprefixer()) // Prefix css with older browser support
     .pipe(plugins.cleanCss({ level: 2 })) // Minify css
@@ -17,5 +17,5 @@ const buildScss = () => {
 };
 
 module.exports = {
-  buildScss
+  buildStyles
 }

@@ -16,5 +16,7 @@ const reload = (done) => {
   done();
 };
 
-exports.reload = reload;
-exports.sync = sync;
+module.exports = {
+  reload,
+  sync
+}
