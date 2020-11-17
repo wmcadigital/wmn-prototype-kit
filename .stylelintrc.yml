@@ -306,6 +306,7 @@ rules:
 
   # selector-class-pattern - specify a pattern for class selectors.
   # https://stylelint.io/user-guide/rules/selector-class-pattern
+  # Matches wmnds-* and follows bem for up two blocks / modifiers
   selector-class-pattern:
     - '^wmnds(-[a-z0-9]+)*((__|--)[a-z0-9]+(-[a-z0-9]+)*){0,2}$'
     - resolveNestedSelectors: true
