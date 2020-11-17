@@ -11,7 +11,7 @@ const buildHtml = () => {
         watch: true,
       })
     )
-    // .pipe(plugins.replace(/(\w+=\")\//g, '$1./')) // Replace '/' with './' - fix for gh-pages deploy
+    .pipe(plugins.replace(/(\w+=\")\//g, '$1./')) // Replace '/' with './' - fix for gh-pages deploy
     .pipe(plugins.formatHtml())
     .pipe(plugins.htmlmin({ removeComments: true, collapseWhitespace: true }))
     .pipe(dest(paths.output.html));
