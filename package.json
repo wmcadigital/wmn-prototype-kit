@@ -42,7 +42,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-prettier": "^1.1.2",
-    "wmn-design-system": "^1.0.0"
+    "wmn-design-system": "*"
   },
   "dependencies": {}
 }
