@@ -7,7 +7,7 @@
     "setup": "npm i && gulp",
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "gulp build && gh-pages -d build",
+    "deploy": "GH_PAGES_BUILD=TRUE gulp build && gh-pages -d build",
     "clean": "gulp clean"
   },
   "repository": {
@@ -24,6 +24,8 @@
     "browser-sync": "^2.26.12",
     "del": "^6.0.0",
     "gh-pages": "^3.1.0",
+    "git-repo-name": "^1.0.1",
+    "git-username": "^1.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
