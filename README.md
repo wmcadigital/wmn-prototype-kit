@@ -14,4 +14,4 @@ There are many different ways you can get install the Prototype Kit, follow our 
 
 ### Using Prototype Kit
 
-If you are new to the Prototype Kit or using [Nunjucks](https://mozilla.github.io/nunjucks/), then follow the [build a basic prototype guide](./docs/build-basic-prototype.md).
+If you are new to the Prototype Kit or using [Nunjucks](https://mozilla.github.io/nunjucks/), then follow the [build a basic prototype guide](./docs/build-basic-prototype/build-basic-prototype.md.md).
