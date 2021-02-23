@@ -1,8 +1,7 @@
 {
-  "name": "wmn-user-testing-template",
+  "name": "wmn-prototype-kit",
   "version": "1.0.0",
   "description": "A template repository for creating WMN user testing prototypes",
-  "main": "index.js",
   "scripts": {
     "setup": "npm i && gulp",
     "start": "gulp",
@@ -12,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wmcadigital/wmn-user-testing-template.git"
+    "url": "git+https://github.com/wmcadigital/wmn-prototype-kit.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wmcadigital/wmn-user-testing-template/issues"
+    "url": "https://github.com/wmcadigital/wmn-prototype-kit/issues"
   },
-  "homepage": "https://github.com/wmcadigital/wmn-user-testing-template#readme",
+  "homepage": "https://github.com/wmcadigital/wmn-prototype-kit#readme",
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "del": "^6.0.0",
