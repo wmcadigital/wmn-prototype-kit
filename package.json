@@ -30,8 +30,9 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-format-html": "^1.2.5",
+    "gulp-htmlhint": "^4.0.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-load-plugins": "^2.0.4",
+    "gulp-load-plugins": "^2.0.6",
     "gulp-nunjucks": "^5.1.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-rename": "^2.0.0",
@@ -44,6 +45,5 @@
     "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-prettier": "^1.1.2",
     "wmn-design-system": "^1.2.0"
-  },
-  "dependencies": {}
+  }
 }
