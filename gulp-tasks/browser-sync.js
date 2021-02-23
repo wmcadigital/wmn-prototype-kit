@@ -1,22 +1,25 @@
-const browserSync = require("browser-sync").create();
+const browserSync = require('browser-sync').create();
+const paths = require('./paths.js');
 
-const paths = require("./paths.js");
-
-const sync = () => {
+const startingBrowserSync = () => {
   return browserSync.init({
     server: {
       baseDir: paths.output.dir,
+      routes: {
+        '/_sourcemaps': './_sourcemaps'
+      }
     },
-    port: 8888,
+    port: 8888
   });
 };
 
-const reload = (done) => {
+const reloadingBrowserSync = done => {
   browserSync.reload();
   done();
 };
 
 module.exports = {
-  reload,
-  sync
-}
+  browserSync,
+  reload: reloadingBrowserSync,
+  startBrowserSync: startingBrowserSync
+};
