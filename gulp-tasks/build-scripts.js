@@ -1,6 +1,5 @@
 // Gulp requires
 const { src, dest } = require('gulp');
-const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
 // Local requires
 const paths = require('./paths.js');

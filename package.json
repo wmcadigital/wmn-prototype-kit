@@ -22,8 +22,12 @@
   "devDependencies": {
     "@babel/preset-env": "^7.13.5",
     "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.14",
     "del": "^6.0.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "gh-pages": "^3.1.0",
     "git-repo-name": "^1.0.1",
     "git-username": "^1.0.0",
@@ -42,12 +46,12 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-stylelint": "^13.0.0",
-    "prettier": "^2.1.2",
-    "stylelint": "^13.7.2",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.11.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-prettier": "^1.1.2",
     "webpack-stream": "^6.1.2",
-    "wmn-design-system": "^1.2.0"
+    "wmn-design-system": "^1.4.0"
   }
 }

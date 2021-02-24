@@ -32,7 +32,7 @@ const buildTemplates = () => {
     .pipe(plugins.formatHtml())
     .pipe(plugins.htmlmin({ removeComments: true, collapseWhitespace: true }))
     .pipe(plugins.replace('$*urlBase', urlBase)) // Set the html url base
-    .pipe(plugins.replace(/(\w+=\")\//g, replaceRelativeUrls)) // Replace any relative 'attr="/"' with 'attr="./"'
+    .pipe(plugins.replace(/(\w+=")\//g, replaceRelativeUrls)) // Replace any relative 'attr="/"' with 'attr="./"'
     .pipe(dest(paths.output.html));
 };
 

@@ -1,5 +1,4 @@
 // Modules
-const gulp = require('gulp');
 const { series, parallel, watch } = require('gulp');
 // Tasks
 const { startBrowserSync, reload } = require('./gulp-tasks/browser-sync'); // BrowserSync server
@@ -27,7 +26,14 @@ const watchFiles = () => {
 };
 
 // Gulp tasks
-const build = series(clean, copyWmndsAssets, buildStyles, buildTemplates, lintStyles, lintTemplates);
+const build = series(
+  clean,
+  copyWmndsAssets,
+  parallel(buildStyles, buildScripts, buildTemplates),
+  lintStyles,
+  lintScripts,
+  lintTemplates
+);
 const serve = series(build, parallel(watchFiles, startBrowserSync));
 
 // Register tasks
