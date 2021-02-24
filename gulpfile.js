@@ -9,9 +9,13 @@ const paths = require('./gulp-tasks/paths');
 const { buildStyles } = require('./gulp-tasks/build-styles');
 const { lintStyles } = require('./gulp-tasks/lint-styles');
 
+// SCRIPTS
+const lintScripts = require('./gulp-tasks/lint-scripts'); // Lint scripts/JS
+const buildScripts = require('./gulp-tasks/build-scripts'); // Minify, and concatenate scripts
+
 // Templates
-const { buildTemplates } = require('./gulp-tasks/build-html'); // build nunjucks templates
 const lintTemplates = require('./gulp-tasks/lint-html'); // Lint templates/HTML
+const { buildTemplates } = require('./gulp-tasks/build-html'); // build nunjucks templates
 
 const { copyWmndsAssets } = require('./gulp-tasks/copy-wmnds-assets');
 const { clean } = require('./gulp-tasks/clean');
@@ -23,15 +27,13 @@ const watchFiles = () => {
 };
 
 // Gulp tasks
-const build = series(copyWmndsAssets, buildStyles, lintStyles, buildTemplates, lintTemplates);
+const build = series(clean, copyWmndsAssets, buildStyles, buildTemplates, lintStyles, lintTemplates);
 const serve = series(build, parallel(watchFiles, startBrowserSync));
 
 // Register tasks
-// gulp.task('default', serve);
-// gulp.task('build', build);
-// gulp.task('clean', clean);
-// gulp.task('lintTemplates', lintTemplates);
 exports.default = serve;
 exports.build = build;
 exports.clean = clean;
 exports.lintTemplates = lintTemplates;
+exports.lintScripts = lintScripts;
+exports.buildScripts = buildScripts;

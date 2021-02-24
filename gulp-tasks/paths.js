@@ -1,10 +1,10 @@
 // Variables
 const dirBase = {
-  www: "src/www",
-  assets: "src/assets",
-  output: "build",
-  wmnds: "node_modules/wmn-design-system/build"
-}
+  www: 'src/www',
+  assets: 'src/assets',
+  output: 'build',
+  wmnds: 'node_modules/wmn-design-system/build'
+};
 
 module.exports = {
   njk: {
@@ -16,20 +16,23 @@ module.exports = {
     src: `${dirBase.assets}/scss/*.scss`,
     mainSrc: `${dirBase.assets}/scss/wmn-user-testing.scss`
   },
+  js: {
+    src: `${dirBase.assets}/js/*.js`
+  },
   wmnds: {
-    njk: { 
+    njk: {
       srcDir: `${dirBase.wmnds}/njk`
     },
-    css: { 
+    css: {
       src: `${dirBase.wmnds}/css/wmnds-components.min.css`
     },
-    js: { 
+    js: {
       src: `${dirBase.wmnds}/js/*.min.js`
     },
-    img: { 
+    img: {
       src: `${dirBase.wmnds}/img/*.svg`
     },
-    fonts: { 
+    fonts: {
       src: `${dirBase.wmnds}/fonts/*`
     }
   },
@@ -39,6 +42,6 @@ module.exports = {
     css: `${dirBase.output}/css/`,
     img: `${dirBase.output}/img/`,
     js: `${dirBase.output}/js`,
-    fonts: `${dirBase.output}/fonts/`,
+    fonts: `${dirBase.output}/fonts/`
   }
 };
